@@ -20,3 +20,25 @@
 .App-link {
   color: #09d3ac;
 }
+
+.state-band {
+  background-color: #282c34;
+  min-width: 100%;
+  min-height: 50px;
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 30pt;
+}
+
+.state-element {
+  background-color: #373b42;
+  color: white;
+  min-width: 50px;
+  min-height: 50px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
