@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Examples from './Examples';
 
@@ -29,12 +29,16 @@ function App() {
   const [state, setState] = useState(startState);
   const [text, setText] = useState('');
 
+  useEffect(
+    () => {
+      let timer = setTimeout(() => rhs && rhs.values.length === 1 && setState(state.replace(lhs, rhs.values[0][0])), 500);
+      return () => clearTimeout(timer);
+    }
+  )
+
   const rules = textToRules(text);
 
   const [lhs, rhs] = Object.entries(rules).find(([lhs, rhs]) => state.indexOf(lhs) !== -1) || [null, null];
-
-  if(rhs && rhs.values.length === 1)
-    setTimeout(() => setState(state.replace(lhs, rhs.values[0][0])), 500);
 
   return (
     <div className="App">
