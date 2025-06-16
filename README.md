@@ -13,4 +13,4 @@ A fun project to simulate a non-deterministic, turing complete computational mod
     Z -> k
     D -> a | d
 ### Run in docker:
-    ```docker run -p 3000:3000 --rm ghcr.io/koevoet1221/unrestricted-grammar-simulator:latest```
+    docker run -p 3000:3000 --rm ghcr.io/koevoet1221/unrestricted-grammar-simulator:latest
